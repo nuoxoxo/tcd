@@ -1,0 +1,78 @@
+*/mazoise
+
+server
+.env
+
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*.pdf
+*.txt
+
+Pho-eaters/pho__draft*/philo
+!Pho-eaters/pho__draftx2_cdn_stripped/philo
+
+doc
+out
+test
+main
+yoo*
+alien*
+socrate*
+minishell
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+!webserv*
