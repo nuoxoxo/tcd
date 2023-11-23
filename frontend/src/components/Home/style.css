@@ -1,0 +1,64 @@
+.homepage {
+	max-width: 100%;
+	height: 100vh;
+	/* max-height: 100%; */
+	overflow: hidden;
+	position: relative;
+}
+
+.homepage .background {
+	background-image: url('./background.jpg');
+	background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+}
+
+.homepage .logo {
+	/* margin-top: 5%; */
+	margin-top: 10vh;
+	margin-left: 50%;
+	transform: translate(-50%);
+}
+
+.homepage .navigate {
+	list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation horizontally */
+    margin-top: 20vh; /* Adjusted margin for better placement */
+}
+
+.homepage .navigate a{
+	/* font-family: 'Press Start 2P'; */
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	/* margin-left: 45%; */
+	transform: translate(-50%);
+	font-size: 24px;
+	margin: 0 15px;
+	text-decoration: none;
+	
+}
+
+.homepage .navigate a:hover{
+	color: #00ffff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .homepage .navigate {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+        align-items: center; /* Center items vertically */
+        margin-top: 5vh; /* Adjusted margin for better spacing */
+    }
+
+    .homepage .navigate a {
+        margin: 1vh 0; /* Adjusted margin for better spacing */
+    }
+}

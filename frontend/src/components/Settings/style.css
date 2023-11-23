@@ -1,0 +1,116 @@
+.settings {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.settings .header {
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-bottom: 86px;
+    text-align: center;
+}
+
+.settings .background {
+    background-image: url('./images/background.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 0px;
+    background-position: bottom;
+    /* bottom: 0px; */
+    /* left: 0px; */
+}
+
+/* Remove Button Styles */
+.settings #remove {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    /* Add cursor pointer for better usability */
+}
+
+/* Block1 Styles */
+.settings .block1 {
+    width: 62%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fff;
+    /* Add a background color */
+    border-radius: 10px;
+    /* Add a subtle border radius */
+    padding: 20px;
+    /* Add padding for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+}
+
+/* Avatar Styles */
+.settings .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Make it a circle */
+    margin: 0 auto;
+    /* Center the avatar */
+
+}
+
+/* OTC Styles */
+.otc {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.otc fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.otc fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.otc legend {
+    margin: 0 auto 1em;
+    color: #5555FF;
+}
+
+/* Number Input Styles */
+input[type="number"] {
+    width: 100%;
+    line-height: 1;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border: 2px solid #BBBBFF;
+    color: purple;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Divider Styles */
+.otc div::before {
+    content: '';
+    height: 2px;
+    flex: 1;
+    background: #BBBBFF;
+    margin: 0 10px;
+}

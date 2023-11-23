@@ -1,0 +1,344 @@
+.block {
+	/* width: 300px; */
+	/* height: 600px; */
+	height: 1000px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	margin: 5px;
+}
+
+.channels,
+.players {
+	width: calc(30% - 20px);
+}
+
+.messages {
+	width: calc(40% - 20px);
+}
+
+.main-container {
+	font-family: 'Courier New', monospace;
+}
+
+.channels,
+.players,
+.messages {
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.channels {
+	/* background-color: red; */
+	background-color: #d1ccc0;
+}
+
+.messages {
+	background-color: #b2b2b2;
+}
+
+.players {
+	background-color: #c4b4a5;
+}
+
+/* Channels styling */
+.block.channels .content .general .chat {
+	background-color: #b2b2b2;
+	text-align: left;
+	/* width: 100%; */
+	height: 5%;
+	padding: 10px 5px;
+	border-bottom: #7f8c8d 1px solid;
+}
+
+.block.channels .content .general .chat.selected {
+	background-color: #a6a6a6;
+}
+
+.block.channels .content .general .chat:hover {
+	background-color: #999999;
+	cursor: pointer;
+}
+
+.block.channels .content .general .chat p {
+	margin: 0;
+	margin-left: 10px;
+	color: #ecf0f1;
+}
+
+.block.channels .content .add {
+	height: 30px;
+	background-color: #a6a6a6;
+	border: 0;
+	margin-bottom: 5px;
+	margin: 5px;
+	width: 70%;
+	color: #ecf0f1;
+	/* font-family: ; */
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.block.channels .content .general .options {
+	left: 90%;
+	height: 40px;
+	width: 40px;
+}
+
+.block.channels .content .general .chat .title {
+	color: #ecf0f1;
+}
+
+.block.channels .content .general .chat.error {
+	color: #ecf0f1;
+	height: 60px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+}
+
+.block.channels .content .general .chat .type {
+	color: #bdc3c7;
+}
+
+.block.channels .general .chat.crossection {
+	background-color: #b2b2b2;
+	/* text-align: center; */
+}
+
+.block.channels>.title h1 {
+	color: #ecf0f1;
+}
+
+.block.channels>.title {
+	background-color: rgb(201, 192, 211);
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 19px;
+}
+
+/* Players styling */
+.block.players>.title h1 {
+	color: #ecf0f1;
+}
+
+.block.players>.title {
+	background-color: rgb(201, 192, 211);
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 19px;
+}
+
+.block.players .content .Collapsible {
+	position: relative;
+	/* This property is added to make the player-box a containing block for absolutely positioned elements */
+	background-color: #d1ccc0;
+	text-align: left;
+	color: #ecf0f1;
+	/* width: auto; */
+	/* height: 5%; */
+	padding: 10px 5%;
+	border-bottom: #7f8c8d 1px solid;
+}
+
+.block.players .content .Collapsible__trigger {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.block.players .content .Collapsible .options {
+	position: absolute;
+	/* This element will be positioned absolutely relative to the player-box element */
+	left: 90%;
+	/* This will position the left edge of the options element 90% of the way across the player-box element */
+	top: 0;
+	/* This will position the top edge of the options element at the top of the player-box element */
+	background-color: transparent;
+	border: none;
+}
+
+.block.players .content .Collapsible .menu {
+	color: lightcoral;
+	max-width: 100px;
+}
+
+.block.players .content .Collapsible__contentOuter {
+	background-color: #d1ccc0;
+}
+
+.block.players .content .Collapsible__contentInner .buttons {
+	max-height: 300px;
+	/* Center childs in middle of player-box */
+	display: flex;
+	flex-direction: column;
+}
+
+.block.players .content .Collapsible__contentInner .action-button {
+	/* background-color: #8e44ad; */
+	width: 70%;
+	height: 20px;
+	/* Center in middle of player-box */
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: none;
+	color: #ecf0f1;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: 10px;
+}
+
+.block.players .content .Collapsible__contentInner .buttons .add-block {
+	display: flex;
+	/* flex-direction: row; */
+	/* align-items: center; */
+	/* justify-content: space-between; */
+}
+
+.block.players .content .Collapsible__contentInner .action-button.add,
+.block.players .content .Collapsible__contentInner .action-button.block {
+	width: 20%;
+}
+
+.block.players .content .Collapsible__contentInner .buttons .mute-kick {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.block.players .content .Collapsible__contentInner .action-button.mute,
+.block.players .content .Collapsible__contentInner .action-button.kick {
+	width: 20%;
+}
+
+/* Chat Boxes */
+
+.block.messages {
+	position: relative;
+}
+
+.block.messages .box {
+	/* position: relative; */
+	border: 2px solid #95a5a6;
+	background-color: #b2b2b2;
+	border-radius: 10px;
+	/* margin: 10px; */
+	padding: 10px;
+	/* margin: 10px 0; */
+	/* text-align: left;
+	font-size: 15px; */
+	/* width: 50%; */
+	margin: 20px;
+}
+
+/* .block.messages .box {
+	border: 2px solid #dedede;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 20px;
+} */
+
+/* Darker chat container */
+.block.messages .box.right {
+	border-color: #7f8c8d;
+	background-color: #95a5a6;
+	/* float: right; */
+	text-align: right;
+}
+
+/* Clear floats */
+.block.messages .box::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Style images */
+.block.messages .box img {
+	float: left;
+	max-width: 60px;
+	width: 100%;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+
+/* Style the right image */
+.block.messages .box img.right {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/* Style time text */
+.time-right {
+	float: right;
+	color: darkgoldenrod;
+}
+
+/* Style time text */
+.time-left {
+	float: left;
+	color: darkolivegreen;
+}
+
+.block.messages {
+	flex-direction: column;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* position: relative; */
+}
+
+/* .block.messages .box {
+	/* display: flex; */
+/* overflow-y: auto; */
+/* } */
+
+/* .block.messages .chat-box {
+	/* position: relative; */
+/* }  */
+
+.block.messages .input {
+	position: fixed;
+	color: #333;
+	background-color: #ecf0f1;
+	width: 90%;
+	/* left: 0px; */
+	height: 50px;
+	font-size: 20px;
+	/* bottom: 0px; */
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: none;
+	padding: 10px;
+}
+
+
+/* button */
+.block.messages .button {
+	position: fixed;
+	color: pink;
+	background-color: #3498db;
+	/* right: 0px; */
+	width: 10%;
+	height: 57px;
+	/* bottom: 0px; */
+	bottom: 0;
+	right: 0;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+}

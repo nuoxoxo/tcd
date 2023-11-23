@@ -1,0 +1,114 @@
+.friends .friendblock {
+	width: 300px;
+	height: 350px;
+	text-align: center;
+	outline: 5px solid #3498db;
+	display: inline-block;
+	margin: 10px;
+}
+
+.friends .friendblock .avatar {
+	width: 200px;
+	height: 200px;
+	box-shadow: 0 0 0 3pt #3498db;
+	background-color: #2c3e50;
+	border-radius: 50%;
+	margin-top: 20px;
+	/* margin-bottom: 10px; */
+}
+
+.friends .friendblock .status {
+	width: 80%;
+	margin-top: 15px;
+	height: 50px;
+	margin-left: 10%;
+	position: relative;
+	font-family: 'Arial', sans-serif;
+}
+
+.friends .friendblock .denied,
+.friends .friendblock .accept {
+	display: inline-block;
+	position: absolute;
+	width: 48%;
+	height: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	line-height: 50px;
+}
+
+.friends .friendblock .denied {
+	background-color: #e74c3c;
+	/* Reddened denied button */
+	right: 2%;
+}
+
+.friends .friendblock .accept {
+	background-color: #2ecc71;
+	/* Greened accept button */
+	left: 2%;
+}
+
+.friends .friendblock .denied:hover {
+	transition: 0.3s;
+	background-color: #c0392b;
+}
+
+.friends .friendblock .accept:hover {
+	background-color: #27ae60;
+	transition: 0.3s;
+}
+
+.friends .friendblock .accept:active,
+.friends .friendblock .denied:active,
+.friends .friendblock .status .remove:active {
+	transform: translateY(4px);
+}
+
+.friends .friendblock .pending {
+	position: absolute;
+	background-color: #95a5a6;
+	width: 185px;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.friends .friendblock .status .remove {
+	position: absolute;
+	right: 0px;
+	background-color: #e74c3c;
+	width: 50px;
+	height: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.friends .friendblock .status .remove:hover {
+	transition: 0.3s;
+	background-color: #c0392b;
+}
+
+.friends .friendblock .status .remove img {
+	margin-top: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+.friends .friendblock .status .active {
+	position: absolute;
+	background-color: #8e44ad;
+	color: white;
+	width: 185px;
+	height: 100%;
+	border-radius: 5px;
+	line-height: 50px;
+}
+
+.friends .friendblock .accept img,
+.friends .friendblock .denied img,
+.friends .friendblock .pending img {
+	margin-top: 10px;
+	width: 30px;
+	/* color: white; */
+	filter: grayscale(100%);
+}

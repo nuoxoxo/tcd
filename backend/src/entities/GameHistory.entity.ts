@@ -1,0 +1,47 @@
+import { BeforeInsert, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { User } from "./User.entity";
+import { ApiProperty } from '@nestjs/swagger';
+
+@Entity()
+export class GameHistory {
+
+	@ApiProperty({ description: 'The id of the game', example: 1 })
+	@PrimaryGeneratedColumn()
+	id: number;
+
+	@ApiProperty({ description: 'Type of game', example: 'Game001', default: 'Game001' })
+	@Column()
+	mode: string; // TODO Change to Enum?
+
+	@ApiProperty({ description: 'The winner of the game', type: () => User })
+	@ManyToOne(() => User, (user) => user.games_won, { eager: true, onDelete: 'CASCADE' })
+	@JoinColumn()
+	winner: User;
+
+	@ApiProperty({ description: 'The loser of the game', type: () => User })
+	@ManyToOne(() => User, (user) => user.games_lost, { eager: true, onDelete: 'CASCADE' })
+	@JoinColumn()
+	loser: User;
+
+	@ApiProperty({ description: 'Is the game a draw?', example: false })
+	@Column({ default: false })
+	draw: boolean;
+
+	@ApiProperty({ description: 'score of the winner', example: 10 })
+	@Column({ default: 0 })
+	winnerScore: number;
+
+	@ApiProperty({ description: 'score of the loser', example: 5 })
+	@Column({ default: 0 })
+	loserScore: number;
+
+	@ApiProperty({ description: 'Creation Date epoch', example: '1669318644507' })
+	@Column()
+	createdAt: string;
+
+	@BeforeInsert()
+	updateDates() {
+		const date = new Date().valueOf() + 3600;
+		this.createdAt = date.toString();
+	}
+}

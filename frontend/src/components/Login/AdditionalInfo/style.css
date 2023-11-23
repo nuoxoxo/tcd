@@ -1,0 +1,119 @@
+.additionalinfo .background {
+	background-image: url('./images/beau-blue.png');
+	background-size: cover;
+	position: fixed;
+	z-index: -1;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	width: 100%;
+	height: 100%;
+}
+
+.additionalinfo .header {
+	/* font-family: 'FlappyBirdy'; */
+	font-family: 'Open Sans', sans-serif;
+	/* font-size: 120px; */
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 20px;
+	color: #333;
+
+}
+
+.additionalinfo .invalidinput {
+	position: absolute;
+	color: red;
+	margin: 0;
+}
+
+.additionalinfo .text {
+	/* font-family: 'FlappyBirdy'; */
+	font-family: 'Open Sans', sans-serif;
+	/* font-size: 30px; */
+	font-size: 1.5rem;
+	margin-bottom: 0px;
+	color: #555;
+}
+
+.additionalinfo .input {
+	/* height: 20px; */
+	/* font-size: larger; */
+	font-size: 1.2rem;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+
+}
+
+.additionalinfo .previewimage {
+	width: 200px;
+	height: 200px;
+	/* position: relative; */
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.additionalinfo button {
+	padding: 10px;
+	margin-top: 10px;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.additionalinfo button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.additionalinfo .previewcontainer {
+	display: inline-block;
+}
+
+.additionalinfo #remove{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.additionalinfo .avatarlist {
+	width: 400px; 
+	height: 400px;
+	background-color: lightcyan;
+	overflow:hidden;
+	overflow-y:visible; 
+	/* margin: 0; */
+	/* margin-right: 0; */
+	display: inline-block;
+	outline: black solid 5px;
+	outline: black solid 2px;
+	position: relative;
+}
+
+.additionalinfo .avatarlist img {
+	margin: 20px;
+	width: 150px;
+	height: 150px;
+	/* border: 5px solid red; */
+	border-radius: 50%; /* Circular images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.additionalinfo .avatarlist .selected {
+	/* border: 5px solid red; */
+	outline-color: lightcoral;
+	outline-width: 3px; 
+	outline-style: solid; 
+}
+
+.additionalinfo button {
+	margin-left: 30px;
+	background-color: green;
+}
