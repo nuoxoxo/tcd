@@ -1,12 +1,13 @@
 FROM node:13.12.0-alpine
 
+WORKDIR /app
 
-COPY ./ /usr/src/app/.
+COPY package*.json ./
 
-WORKDIR /usr/src/app
-RUN npm install
+COPY . .
+
+RUN npm ci
 RUN npm install webpack
 RUN npm run build
-
 
 CMD ["npm", "run", "start:dev"]
