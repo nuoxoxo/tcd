@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   postgres:
     container_name: pg_container
@@ -10,6 +11,7 @@ services:
       POSTGRES_DB: transcendence
     ports:
       - "5432:5432"
+
   node:
     build:
       context: ./backend/.
@@ -22,6 +24,10 @@ services:
       - postgres
     env_file:
       - ./.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
   nginx:
     container_name: ts_nginx
     build:
@@ -32,3 +38,6 @@ services:
     restart: always
     env_file:
       - ./.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
