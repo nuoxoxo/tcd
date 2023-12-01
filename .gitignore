@@ -1,7 +1,10 @@
 */mazoise
 
+backend/uploa*
+
 server
 .env
+.env.production
 
 .DS_Store
 Thumbs.db

@@ -14,4 +14,6 @@ fclean:	down
 	rm -rf ./database
 	docker volume rm $$(docker volume ls -q)
 
+f	: fclean
+
 .PHONY:	all down fclean
